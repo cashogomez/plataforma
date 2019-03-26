@@ -1,0 +1,18 @@
+<h1>Show Jugador</h1>
+
+<ul>
+
+  <li>
+    <strong>Usuario:</strong>
+    <%= @jugador.usuario %>
+  </li>
+
+  <li>
+    <strong>Puntos:</strong>
+    <%= @jugador.puntos %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.jugador_path(@conn, :edit, @jugador) %></span>
+<span><%= link "Back", to: Routes.jugador_path(@conn, :index) %></span>

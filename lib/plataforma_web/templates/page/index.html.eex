@@ -1,0 +1,6 @@
+<div class="container">
+  <%= link("Crear cuenta de Jugador", to: "/jugadores/new", class: "button") %>
+  <%= link("Lista de Jugadores", to: "/jugadores", class: "button") %>
+  
+  <%= IO.inspect("¡¡Hola Mundo!!")%>
+</div>

@@ -1,0 +1,28 @@
+<h1>Listing Jugadores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Puntos</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for jugador <- @jugadores do %>
+    <tr>
+      <td><%= jugador.usuario %></td>
+      <td><%= jugador.puntos %></td>
+
+      <td>
+        <%= link "Show", to: Routes.jugador_path(@conn, :show, jugador) %>
+        <%= link "Edit", to: Routes.jugador_path(@conn, :edit, jugador) %>
+        <%= link "Delete", to: Routes.jugador_path(@conn, :delete, jugador), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Jugador", to: Routes.jugador_path(@conn, :new) %></span>
